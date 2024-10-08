@@ -1,27 +1,16 @@
-body{
+body {
     background-color: hsl(218, 23%, 16%);
     font-weight: 800;
 }
-p{
-    color:  hsl(193, 38%, 86%);
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
-    
- }
-h2{
-    color: hsl(150, 100%, 66%);
-    letter-spacing: 4px;
-    font-size: 15px;
-    margin-top: 25px;
-}
-.conteudo{
+
+.conteudo {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-.card{
+
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,21 +20,44 @@ h2{
     border-radius: 10px;
     background-color: hsl(217, 19%, 24%);
 }
-hr{
+.conselhos {
+    color: hsl(193, 38%, 86%);
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    display: none;
+}
+
+.ativo {
+    display: block;
+}
+
+.carrosel-conselhos h2 {
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 4px;
+    font-size: 15px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+
+
+hr {
     width: 100%;
     opacity: 0.3;
 }
 
-.btn-card{
+.btn-card {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: none;
     background-color: hsl(150, 100%, 66%);
-    transform: translateY(85%);  
+    transform: translateY(85%);
 
 }
-.btn-card:hover{
+
+.btn-card:hover {
     cursor: pointer;
     box-shadow: 0 5px 15px hsl(150, 100%, 66%);
 }

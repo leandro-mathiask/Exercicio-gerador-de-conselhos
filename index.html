@@ -11,19 +11,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Gerador de Conselhos</title>
 </head>
 
 <body>
     <main class="conteudo">
-        <div class="card"> 
-            <h2 class="titulo-card">ADVICE &nbsp;&nbsp;&nbsp;#117</h2>
-            <p class="conselhos"><Strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt impedit
-                    totam ipsam maxime.</Strong></p>
+        <div class="card">
+            <div class="carrosel-conselhos">
+                <h2 class="titulo-card">ADVICE &nbsp;&nbsp;&nbsp;<span id="advice">#117</span></h2>
+                <p class="conselhos ativo"><Strong>Tudo posso naquele que me fortalece.</Strong></p>
+                        
+                <p class="conselhos"><Strong>Deus é bom o tempo todo, o tempo todo Deus é bom.</Strong></p>
+                <p class="conselhos"><Strong>Confie no senhor e tudo será realizado.</Strong></p>
+                <p class="conselhos"><Strong>A mais pura verdade e a palavra do senhor e aquele que crer, para sempre vivera.</Strong></p>
+                <p class="conselhos"><Strong>Fé é o que move montanhas.</Strong></p>
+                <p class="conselhos"><Strong>Nada é impossivel na vontade do senhor.</Strong></p>
+            </div>
             <hr>
-            <button class="btn-card" id="btn-avancar">
+            <button class="btn-card" id="btn-avancar" onclick="proximaFrase()">
                 <i class="fas fa-undo-alt" alt="Imagem para avancar"></i>
             </button>
         </div>
@@ -34,6 +41,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
         integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./src/js/index.js"></script>
 </body>
 
 </html>
