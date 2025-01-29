@@ -1,17 +1,21 @@
-const botao = document.getElementById('btn-avancar')
-const conselhos = document.querySelectorAll('.conselhos')
-let currentIndex = 0;
-let advice = document.getElementById('advice')
+document.getElementById('btn-avancar').addEventListener('click', () => {
+    mostrarFraseAleatorias()
+})
 
-function proximaFrase() {
-    const primeiraFrase = currentIndex === conselhos.length - 1
-    if (primeiraFrase) {
-        currentIndex = -1
+async function mostrarFraseAleatorias() {
+    try {
+        const url = await fetch("https://api.adviceslip.com/advice")
+        if (!url.ok) {
+            throw new Error("Ocorreu um erro ao tentar buscar as informações da API");
+        }
+        const adviceContent = await url.json()
+        const adviceId = `Advice #${adviceContent.slip.id}`
+        const adviceText = `"${adviceContent.slip.advice}"`
+        document.getElementById('advice').innerHTML = adviceId
+        document.getElementById('frase-ativa').innerHTML = adviceText
+    } catch (error) {
+        // console.error("Erro ao tentar buscar as informações da API", error)
     }
-    const fraseSelecionada = document.querySelector('.ativo')
-    fraseSelecionada.classList.remove('ativo')
-    currentIndex++
-    conselhos[currentIndex].classList.add('ativo')
-    advice.innerText = `#${117 + currentIndex}`;
-    
+
 }
+mostrarFraseAleatorias()
